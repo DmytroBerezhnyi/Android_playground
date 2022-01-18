@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <include app:graph="@navigation/settings" />
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.androidplayground.ui.fragment.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.androidplayground.ui.fragment.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_mainFragment_to_chat"
+            app:destination="@id/chat" />
+    </fragment>
+    <include app:graph="@navigation/chat" />
+</navigation>

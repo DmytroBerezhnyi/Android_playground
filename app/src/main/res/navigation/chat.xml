@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat"
+    app:startDestination="@id/chatListFragment">
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.example.androidplayground.ui.fragment.chat_list.ChatListFragment"
+        android:label="ChatListFragment">
+        <action
+            android:id="@+id/action_chatListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.androidplayground.ui.fragment.chat.ChatFragment"
+        android:label="ChatFragment" />
+</navigation>
