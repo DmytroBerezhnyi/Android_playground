@@ -16,7 +16,7 @@ class SplashVM @Inject constructor() : BaseViewModel() {
 
     fun navigateToMaMainScreen() {
         viewModelScope.launch {
-            delay(1000)
+            delay(3000)
             sharedFlow.emit(true)
         }
     }

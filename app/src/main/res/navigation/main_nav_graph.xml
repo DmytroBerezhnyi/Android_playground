@@ -6,6 +6,7 @@
     app:startDestination="@id/splashFragment">
 
     <include app:graph="@navigation/settings" />
+    <include app:graph="@navigation/chat" />
 
     <fragment
         android:id="@+id/splashFragment"
@@ -29,5 +30,4 @@
             android:id="@+id/action_mainFragment_to_chat"
             app:destination="@id/chat" />
     </fragment>
-    <include app:graph="@navigation/chat" />
 </navigation>

@@ -24,6 +24,3 @@ class SettingsDetailFragment : BaseFragment<Binding, VM>() {
 
     }
 }
-
-@HiltViewModel
-class SettingDetailVM @Inject constructor() : BaseViewModel()
